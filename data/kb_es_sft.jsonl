@@ -1,0 +1,2 @@
+{"messages": [{"role": "user", "content": "Explain: Clean Code Principles"}, {"role": "assistant", "content": "Prefer meaningful names, small functions, single responsibility, and clear boundaries. Write tests."}], "weight": 0.6}
+{"messages": [{"role": "user", "content": "Explain: PR Review Checklist"}, {"role": "assistant", "content": "Compiles, tests pass, no secrets, clear naming, small diffs, docs updated, no dead code."}], "weight": 0.6}

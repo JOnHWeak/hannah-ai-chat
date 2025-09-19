@@ -1,0 +1,10 @@
+alembic==1.16.5
+SQLAlchemy==2.0.32
+psycopg==3.2.1
+python-dotenv==1.0.1
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+openai==1.43.0
+
+# Note: Training dependencies moved to requirements-train.txt (use Python 3.12)
+

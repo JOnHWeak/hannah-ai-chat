@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hannah AI - Demo UI</title>
+    <link rel="stylesheet" href="/web/styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hannah AI</h1>
+
+        <section class="card">
+            <h2>Chat với LM Studio</h2>
+            <div class="row">
+                <input id="userId" placeholder="User ID" value="demo-user" />
+                <input id="sessionId" placeholder="Session ID (optional)" />
+                <input id="temperature" type="number" step="0.1" min="0" max="2" value="0.2" />
+            </div>
+            <textarea id="message" rows="4" placeholder="Nhập câu hỏi..."></textarea>
+            <button id="sendBtn">Gửi</button>
+            <pre id="answer"></pre>
+        </section>
+
+        <section class="card">
+            <h2>Đánh giá câu trả lời</h2>
+            <div class="row">
+                <input id="historyId" placeholder="History ID" />
+                <input id="rating" type="number" min="1" max="5" placeholder="1-5" />
+                <button id="rateBtn">Gửi đánh giá</button>
+            </div>
+            <pre id="rateResult"></pre>
+        </section>
+
+        <section class="card">
+            <h2>Tìm kiếm KB (nội bộ DB)</h2>
+            <div class="row">
+                <input id="kbQuery" placeholder="Từ khóa" />
+                <button id="kbSearchBtn">Tìm</button>
+            </div>
+            <ul id="kbResults"></ul>
+        </section>
+
+        <section class="card">
+            <h2>Tìm kiếm Elasticsearch</h2>
+            <div class="row">
+                <input id="esQuery" placeholder="Query" value="*" />
+                <input id="esCategories" placeholder="Categories (comma)" />
+                <input id="esTopN" type="number" min="1" value="5" />
+                <label><input type="checkbox" id="esSave" /> Lưu vào Postgres</label>
+                <button id="esSearchBtn">Chạy</button>
+            </div>
+            <pre id="esResults"></pre>
+        </section>
+    </div>
+
+    <script src="/web/main.js"></script>
+</body>
+<style>
+    /* fallback nếu không load được styles.css */
+    body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        background: #0b0f14;
+        color: #e6edf3;
+        margin: 0;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 24px;
+    }
+
+    .card {
+        background: #111827;
+        border: 1px solid #1f2937;
+        padding: 16px;
+        margin: 16px 0;
+        border-radius: 8px;
+    }
+
+    .row {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+    }
+
+    input,
+    textarea,
+    button {
+        background: #0b1220;
+        color: #e6edf3;
+        border: 1px solid #1f2937;
+        border-radius: 6px;
+        padding: 8px;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    pre {
+        white-space: pre-wrap;
+        background: #0b1220;
+        padding: 8px;
+        border-radius: 6px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        padding: 6px 0;
+        border-bottom: 1px solid #1f2937;
+    }
+</style>
+
+</html>

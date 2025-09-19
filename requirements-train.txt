@@ -1,0 +1,9 @@
+unsloth==2025.2.15
+transformers==4.43.3
+trl==0.9.6
+datasets==2.20.0
+peft==0.11.1
+accelerate==0.34.2
+bitsandbytes==0.43.1
+sentencepiece==0.2.0
+python-pptx==0.6.23
