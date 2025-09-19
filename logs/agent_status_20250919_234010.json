@@ -1,0 +1,60 @@
+{
+  "timestamp": "2025-09-19T23:40:05.705247",
+  "training_data": {
+    "daily_data": {
+      "exists": true,
+      "count": 1,
+      "latest": "2025-09-09.jsonl"
+    },
+    "kb_data": {
+      "exists": true,
+      "count": 2
+    },
+    "merged_data": {
+      "exists": false,
+      "count": 0
+    }
+  },
+  "model_artifacts": {
+    "lora_model": {
+      "exists": false,
+      "size": 0
+    },
+    "merged_model": {
+      "exists": false,
+      "size": 0
+    },
+    "gguf_model": {
+      "exists": false,
+      "size": 0
+    },
+    "lm_studio_deployment": {
+      "exists": false,
+      "size": 0
+    }
+  },
+  "dependencies": {
+    "python_packages": {
+      "unsloth": "❌ Missing",
+      "transformers": "❌ Missing",
+      "datasets": "❌ Missing",
+      "trl": "❌ Missing",
+      "torch": "❌ Missing",
+      "sqlalchemy": "✅ Installed",
+      "elasticsearch": "✅ Installed",
+      "fastapi": "✅ Installed"
+    },
+    "external_tools": {
+      "llama_cpp": "❌ Not configured"
+    },
+    "services": {
+      "database": "❌ Error: No module named 'database'",
+      "elasticsearch": "❌ Not available"
+    }
+  },
+  "recent_activity": {
+    "last_training": null,
+    "recent_chats": "Error: No module named 'database'",
+    "high_rated_chats": "Error: No module named 'database'"
+  }
+}
